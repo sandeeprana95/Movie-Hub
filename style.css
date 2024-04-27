@@ -1,0 +1,150 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --primary-color: #696a7b;
+  --secondary-color: #26272d;
+}
+body {
+  background-color: var(--primary-color);
+}
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--secondary-color);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+span img{
+  width: 90px;
+  /* background-color: #fff; */
+  margin-top: 13px;
+  transition:all 0.3s linear ;
+
+}
+
+#img-span:hover> img{
+  transform: rotate(360deg);
+  background: linear-gradient(to right, #667584,#444b62);
+  border-radius:50%;
+  /* padding: 4px; */
+  /* scale: 2; */
+ }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 36px;
+  color: #fff;
+  font-weight: 700;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 25px;
+  padding: 10px 18px;
+}
+
+
+#search {
+  width: 250px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 17px;
+  color: #fff;
+}
+.btn{
+  background-color: transparent;
+  border: none;
+  color:white;
+  font-family: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+main {
+  width: 100%;
+  max-height: 100%;
+  padding: 20px 25px;
+  position: relative;
+}
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.box {
+  overflow: hidden;
+  width: 280px;
+  height: 510px;
+  background-color: var(--secondary-color);
+  position: relative;
+  box-shadow: 2px 4px 12px #080a27;
+}
+.text {
+  text-transform: capitalize;
+  padding: 7px 15px;
+  height: max-content;
+  font-weight: 400;
+  color: white;
+}
+.overlay {
+  opacity: 0;
+  padding: 20px 15px 40px;
+  transition: all 0.5s ease;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(100%);
+  background-color: white;
+}
+.overlay p {
+  font-weight: 300;
+}
+.box:hover .overlay {
+  opacity: 1;
+  transform: translateY(0%);
+}
+h2 {
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+.image {
+  width: 100%;
+  height: 400px;
+}
+
+@media screen and (max-width: 672px){
+  #content{
+    flex-direction: column;
+  }
+  main{
+    padding: 5%;
+  }
+  nav{
+    flex-direction: column;
+  }
+  .search-box{
+    margin-top: 10px;
+  }
+  #search{
+    width:200px
+  }
+}
